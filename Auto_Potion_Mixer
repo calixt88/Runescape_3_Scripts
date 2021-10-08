@@ -1,4 +1,35 @@
+from random import uniform
+
 import Script_Imports
 import time
 import pyautogui
 
+
+def main():
+    start = time.time()
+    Script_Imports.start_screen()
+    Script_Imports.look_north()
+    for i in range(100):
+        potion_mix()
+    end = time.time()
+    print(end - start)
+
+
+def potion_mix():
+    pyautogui.moveTo(852, 445, uniform(1.0, 2.5), pyautogui.easeOutBack)
+    time.sleep(uniform(1, 2))
+    pyautogui.click()
+    time.sleep(uniform(1, 2))
+    pyautogui.keyDown('2')
+    pyautogui.keyUp('2')
+    time.sleep(uniform(1, 2))
+    pyautogui.keyDown('2')
+    pyautogui.keyUp('2')
+    time.sleep(uniform(1, 2))
+    pyautogui.keyDown('space')
+    pyautogui.keyUp('space')
+    time.sleep(uniform(15, 18))
+    pyautogui.moveTo(852, 445)
+
+
+main()

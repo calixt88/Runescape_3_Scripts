@@ -20,5 +20,5 @@ def start_screen():
 
 
 def check_mouse_position():
-    screenWidth, screenHeight = pyautogui.size()
-    print(screenWidth, screenHeight)
+    currentMouseX, currentMouseY = pyautogui.position()
+    print(currentMouseX, currentMouseY)

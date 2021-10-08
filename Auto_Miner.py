@@ -5,17 +5,20 @@ import Script_Imports
 
 
 def main():
+    start = time.time()
     Script_Imports.start_screen()
-    correct_mouse_position()
+    # correct_mouse_position()
     Script_Imports.look_north()
     mining()
+    end = time.time()
+    print(end - start)
 
 
 def mining():
     time.sleep(1)
     pyautogui.moveTo(848, 664)
 
-    for i in range(1000):
+    for i in range(1050):
         print("Click")
         print(i)
         pyautogui.click()
